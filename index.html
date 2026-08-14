@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usuwanie konta — Budżet Domowy</title>
+<style>
+  :root{
+    --purple:#4C3FC7; --ink:#211C3D; --ink-soft:#4B4760; --border:#E4E1F2; --bg:#FAF9FE;
+  }
+  *{box-sizing:border-box;}
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color:var(--ink); background:var(--bg); line-height:1.65; margin:0;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:48px 24px 96px;}
+  h1{font-size:28px; margin:0 0 6px;}
+  h2{font-size:19px; margin:36px 0 10px; color:var(--purple);}
+  p, li{color:var(--ink-soft); font-size:15.5px;}
+  .updated{color:var(--ink-soft); font-size:14px; margin-bottom:32px;}
+  .brand{font-weight:700; color:var(--purple); text-decoration:none; font-size:15px;}
+  table{width:100%; border-collapse:collapse; margin:16px 0; font-size:14.5px;}
+  th, td{border:1px solid var(--border); padding:10px 12px; text-align:left; vertical-align:top;}
+  th{background:#F1EEFB; color:var(--ink);}
+  td{color:var(--ink-soft);}
+  a{color:var(--purple);}
+  .back{display:inline-block; margin-top:40px; font-size:14px;}
+  hr{border:none; border-top:1px solid var(--border); margin:40px 0;}
+  .footer{font-size:13px; color:var(--ink-soft); margin-top:48px;}
+  ol, ul{padding-left:20px;}
+  ol li, ul li{margin-bottom:6px;}
+  .note{background:#F1EEFB; border-left:3px solid var(--purple); padding:12px 16px; font-size:14px; color:var(--ink-soft); border-radius:4px; margin:16px 0;}
+  .card{background:#fff; border:1px solid var(--border); border-radius:12px; padding:24px 26px; margin:20px 0;}
+  .btn{
+    display:inline-block; background:var(--purple); color:#fff !important; text-decoration:none;
+    padding:11px 20px; border-radius:100px; font-size:14.5px; font-weight:600; margin-top:8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a href="index.html" class="brand">Budżet Domowy</a>
+  <h1>Usuwanie konta i danych</h1>
+  <p class="updated">Instrukcja usunięcia konta oraz informacja o tym, jakie dane zostają skasowane.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0;">Opcja 1 — usuń konto bezpośrednio w aplikacji</h2>
+    <p>To najszybszy sposób. W aplikacji Budżet Domowy:</p>
+    <ol>
+      <li>Zaloguj się na swoje konto.</li>
+      <li>Otwórz menu <strong>Ustawienia → Konto</strong> (ikona koła zębatego w prawym górnym rogu ekranu głównego).</li>
+      <li>Wybierz <strong>„Usuń konto"</strong> i potwierdź decyzję.</li>
+      <li>Jeśli aplikacja poprosi o ponowne potwierdzenie tożsamości (hasłem lub kontem Google), zrób to, aby dokończyć usuwanie.</li>
+    </ol>
+    <p style="margin-bottom:0;">Konto i dane zostaną usunięte natychmiast.</p>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0;">Opcja 2 — zgłoś usunięcie konta e-mailem</h2>
+    <p>Jeśli nie masz dostępu do aplikacji (np. nie pamiętasz hasła i nie możesz się zalogować), napisz do nas bezpośrednio.</p>
+    <p>Podaj w wiadomości adres e-mail powiązany z kontem, abyśmy mogli je zidentyfikować.</p>
+    <a class="btn" href="mailto:hdbb661@gmail.com?subject=Pro%C5%9Bba%20o%20usuni%C4%99cie%20konta%20-%20Bud%C5%BCet%20Domowy&body=Adres%20e-mail%20powi%C4%85zany%20z%20kontem%3A%20">Napisz e-mail z prośbą o usunięcie</a>
+    <p style="margin-bottom:0; margin-top:14px;">Zgłoszenia rozpatrujemy w ciągu do 30 dni.</p>
+  </div>
+
+  <h2>Jakie dane zostają usunięte</h2>
+  <table>
+    <tr><th>Kategoria danych</th><th>Co się z nimi dzieje</th></tr>
+    <tr>
+      <td>Konto (e-mail / logowanie Google)</td>
+      <td>Usuwane trwale z Firebase Authentication</td>
+    </tr>
+    <tr>
+      <td>Profil (imię, powiązania z domem)</td>
+      <td>Usuwany trwale z bazy danych</td>
+    </tr>
+    <tr>
+      <td>Wydatki dodane przez Ciebie</td>
+      <td>Pozostają widoczne dla pozostałych domowników jako część wspólnego budżetu domu (bez powiązania z Twoim kontem, bo konto już nie istnieje)</td>
+    </tr>
+    <tr>
+      <td>Kopie zapasowe / logi systemowe</td>
+      <td>Usuwane zgodnie z cyklem retencji opisanym w Polityce prywatności aplikacji</td>
+    </tr>
+  </table>
+
+  <div class="note">Pełną informację o tym, jakie dane zbieramy, na jakiej podstawie prawnej i jakie masz prawa, znajdziesz w <a href="polityka-prywatnosci.html">Polityce prywatności</a>.</div>
+
+  <hr>
+  <a class="back" href="polityka-prywatnosci.html">Pełna Polityka prywatności →</a>
+  <p class="footer">Budżet Domowy • Kontakt: <a href="mailto:hdbb661@gmail.com">hdbb661@gmail.com</a></p>
+</div>
+</body>
+</html>
